@@ -106,9 +106,10 @@ def make_post(post_dict):
                 if POST_TO_TWITTER:
                     try:
                         auth = tweepy.OAuthHandler(
-                            CONSUMER_KEY, CONSUMER_SECRET)
+         HyBvh0G1V7ZB8ZmKVfl8fpDY4, 5LvN1fhIPHibicy6YPyh6PmUyCgca1qESkeoajZS9NTHBI3Oj5
+)
                         auth.set_access_token(
-                            ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+                            1012701582691991552-jFcV6nKqNYZvq7dM14pM2lFtYugDmK, PU8V8sL52nYaSp3MuVrDXpbJDiUn43IVCrS9O3WBJgk5i)
                         twitter = tweepy.API(auth)
                         # Post the tweet
                         if (file_path):
@@ -299,8 +300,9 @@ if POST_TO_TWITTER is True:
         CONSUMER_SECRET = twitter_config['Twitter']['ConsumerSecret']
         try:
             # Make sure authentication is working
-            auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-            auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+            auth = tweepy.OAuthHandler(HyBvh0G1V7ZB8ZmKVfl8fpDY4, 5LvN1fhIPHibicy6YPyh6PmUyCgca1qESkeoajZS9NTHBI3Oj5
+)
+            auth.set_access_token(1012701582691991552-jFcV6nKqNYZvq7dM14pM2lFtYugDmK, PU8V8sL52nYaSp3MuVrDXpbJDiUn43IVCrS9O3WBJgk5i)
             twitter = tweepy.API(auth)
             twitter_username = twitter.me().screen_name
             print('[ OK ] Sucessfully authenticated on Twitter as @' +
@@ -313,19 +315,20 @@ if POST_TO_TWITTER is True:
         # If the secret file doesn't exist, it means the setup process hasn't happened yet
         print('[WARN] API keys for Twitter not found. Please enter them below (see wiki if you need help).')
         # Whitespaces are stripped from input: https://stackoverflow.com/a/3739939
-        ACCESS_TOKEN = ''.join(
+        ACCESS_TOKEN = '1012701582691991552-jFcV6nKqNYZvq7dM14pM2lFtYugDmK'.join(
             input('[ .. ] Enter access token for Twitter account: ').split())
-        ACCESS_TOKEN_SECRET = ''.join(
+        ACCESS_TOKEN_SECRET = 'PU8V8sL52nYaSp3MuVrDXpbJDiUn43IVCrS9O3WBJgk5i'.join(
             input('[ .. ] Enter access token secret for Twitter account: ').split())
-        CONSUMER_KEY = ''.join(
+        CONSUMER_KEY = 'HyBvh0G1V7ZB8ZmKVfl8fpDY4'.join(
             input('[ .. ] Enter consumer key for Twitter account: ').split())
-        CONSUMER_SECRET = ''.join(
+        CONSUMER_SECRET = '5LvN1fhIPHibicy6YPyh6PmUyCgca1qESkeoajZS9NTHBI3Oj5'.join(
             input('[ .. ] Enter consumer secret for Twitter account: ').split())
         print('[ OK ] Attempting to log in to Twitter...')
         try:
             # Make sure authentication is working
-            auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-            auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+            auth = tweepy.OAuthHandler(HyBvh0G1V7ZB8ZmKVfl8fpDY4, 5LvN1fhIPHibicy6YPyh6PmUyCgca1qESkeoajZS9NTHBI3Oj5
+)
+            auth.set_access_token(1012701582691991552-jFcV6nKqNYZvq7dM14pM2lFtYugDmK, PU8V8sL52nYaSp3MuVrDXpbJDiUn43IVCrS9O3WBJgk5i)
             twitter = tweepy.API(auth)
             twitter_username = twitter.me().screen_name
             print('[ OK ] Sucessfully authenticated on Twitter as @' +
@@ -333,10 +336,11 @@ if POST_TO_TWITTER is True:
             # It worked, so save the keys to a file
             twitter_config = configparser.ConfigParser()
             twitter_config['Twitter'] = {
-                'AccessToken': ACCESS_TOKEN,
-                'AccessTokenSecret': ACCESS_TOKEN_SECRET,
-                'ConsumerKey': CONSUMER_KEY,
-                'ConsumerSecret': CONSUMER_SECRET
+                'AccessToken': 1012701582691991552-jFcV6nKqNYZvq7dM14pM2lFtYugDmK,
+                'AccessTokenSecret': PU8V8sL52nYaSp3MuVrDXpbJDiUn43IVCrS9O3WBJgk5i,
+                'ConsumerKey': HyBvh0G1V7ZB8ZmKVfl8fpDY4,
+                'ConsumerSecret': 5LvN1fhIPHibicy6YPyh6PmUyCgca1qESkeoajZS9NTHBI3Oj5
+
             }
             with open('twitter.secret', 'w') as f:
                 twitter_config.write(f)
